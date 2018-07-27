@@ -1,0 +1,851 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+  *--------------------
+   1. BASE CSS
+----------------------*/
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+a:focus,
+a:hover {
+    outline: 0 solid;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3c4a62;
+    margin: 0 0 15px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
+    font-weight: 400;
+    color: #687284;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    color: #5d6b82;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+    overflow: hidden;
+}
+
+.absulute {
+    position: absolute;
+}
+
+.v-center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.content-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.flex-v-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.social-bookmark li {
+    display: inline;
+}
+
+.social-bookmark li a {
+    background: #d7d7d7 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    margin: 0 2px;
+    padding-top: 9px;
+    text-align: center;
+    width: 40px;
+}
+
+.social-bookmark li a:hover {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.inline li {
+    display: inline;
+}
+
+.inline-block li {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.navbar-toggle {
+    border: 2px solid #f39c12;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background: #f39c12 none repeat scroll 0 0;
+}
+
+.no-margin {
+    margin: 50;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.border {
+    border: 1px solid #ddd;
+}
+
+.border-left {
+    border-left: 1px solid #ddd;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}
+
+.border-top {
+    border-top: 1px solid #ddd;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+ 
+.area-title {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.area-title h2 {
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.area-title h2::before,
+.area-title h2::after {
+    background: rgba(0, 0, 0, 0) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.area-title h2::after {
+    background: #f39c12 none repeat scroll 0 0;
+    height: 4px;
+    width: 20px;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.padding-top {
+    padding-top: 100px;
+}
+
+.padding-bottom {
+    padding-bottom: 100px;
+}
+
+.padding-100-70 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.padding-100-50 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.gray-bg {
+    background: #f7f9fc;
+}
+
+.deep-gray-bg {
+    background: #eff1ff;
+}
+
+.dark-bg {
+    background: #5d6b82;
+    color: #ffffff;
+}
+
+.red-bg {
+    background: #f39c12;
+    color: #ffffff;
+}
+
+.blue-bg {
+    background: #0083ff;
+    color: #ffffff;
+}
+
+.soft-blue-bg {
+    background: #7db9e8;
+    color: #ffffff;
+}
+
+.dark-bg .area-title h2 {
+    color: #ffffff;
+}
+.service-content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.service-content h2::after {
+    border-bottom: 1px dashed rgb(243, 156, 18);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.service-catalouge-content-area {
+    background: rgba(0, 0, 0, 0) url("/assets/service-cargo-bg.png") no-repeat scroll center center / contain;
+    position: relative;
+}
+
+.catalouge-content {
+    background: rgba(243, 156, 18, 0.9) none repeat scroll 0 0;
+    color: #fff;
+    padding: 30px;
+}
+
+.catalouge-content h3 {
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.catalouge-content h3::after {
+    border-bottom: 1px dashed;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.catalouge-content .read-more:hover,
+.catalouge-content .read-more:focus {
+    background: #fff none repeat scroll 0 0;
+    color: #f39c12;
+}
+
+.catalouge-content ul {
+    margin-top: 40px;
+}
+
+.catalouge-content ul li {
+    margin-bottom: 15px;
+}
+
+.catalouge-content ul li i {
+    margin-right: 15px;
+}
+
+.client-photo-list .item {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.client-photo-list .owl-carousel .owl-item.active.center .item {
+    -webkit-box-shadow: 0 0 0 5px #f39c12;
+    box-shadow: 0 0 0 5px #f39c12;
+    position: relative;
+    z-index: 999;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.client-photo-list {
+    margin-bottom: 40px;
+}
+
+.client-details-content .item {
+    padding-top: 70px;
+    position: relative;
+}
+
+.client-details-content .item::after {
+    color: #5d6b82;
+    content: "\f10d";
+    font-family: fontawesome;
+    font-size: 60px;
+    height: 60px;
+    left: 50%;
+    line-height: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 60px;
+}
+
+.client-details-content .item q {
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 37px;
+}
+
+.client-details-content .item h3 {
+    margin-bottom: 10px;
+}
+
+.client_nav span {
+    background: #5d6b82 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    height: 40px;
+    left: 50px;
+    opacity: 0;
+    padding-top: 3px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 50px;
+    cursor: pointer;
+}
+
+.client_nav span:hover {
+    background: #f39c12;
+}
+
+.client_nav span.fa.testi_next {
+    left: auto;
+    right: 50px;
+}
+
+.testmonial-area:hover .client_nav span {
+    left: 0;
+    opacity: 1;
+}
+
+.testmonial-area:hover .client_nav span.testi_next {
+    left: auto;
+    right: 0;
+}
+/* ---------------------------
+    6. SERVIE BOTTOM AREA
+----------------------------- */
+
+.service-bottom-area {
+    position: relative;
+}
+
+.service-bottom-area-bg {
+    background: rgba(0, 0, 0, 0) url("/assets/service-area-bg.jpg") repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.service-bottom-area-bg::after {
+    background: #f5f7f9 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+}
+
+.single-service {
+    margin-bottom: 50px;
+    padding-left: 80px;
+    position: relative;
+}
+
+.service-list .single-service:last-child {
+    margin-bottom: 0;
+}
+
+.service-icon-hexagon {
+    left: -43px;
+    position: absolute;
+    top: -25px;
+}
+
+.hex {
+    background: #f5f7f9 none repeat scroll 0 0;
+    border-radius: 1em / 3.5em;
+    display: inline-block;
+    height: 5.2em;
+    margin: 1em 4.61538em 1em auto;
+    position: relative;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: all 150ms ease-in-out 0s;
+    transition: all 150ms ease-in-out 0s;
+    width: 4em;
+}
+
+.hex:before,
+.hex:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+}
+
+.hex:before {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.hex:after {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.service-icon {
+    background: #5d6b82 none repeat scroll 0 0;
+    bottom: 7px;
+    color: #fff;
+    font-size: 24px;
+    height: 60px;
+    padding-top: 18px;
+    position: absolute;
+    right: 11px;
+    text-align: center;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 34px;
+    z-index: 1;
+}
+
+.service-icon::before,
+.service-icon::after {
+    background: #5d6b82 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    z-index: -1;
+}
+
+.service-icon::before {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.service-icon::after {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.service-icon i {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.service-details h4 {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.single-service:hover .service-details h4 {
+    color: #f39c12;
+}
+
+.single-service:hover .service-icon,
+.single-service:hover .service-icon::before,
+.single-service:hover .service-icon::after {
+    background: #f39c12 none repeat scroll 0 0;
+}
+
+.about-count {
+    margin-top: 80px;
+}
+
+.single-about-count {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    padding: 30px 20px 20px;
+    text-align: center;
+    text-transform: capitalize;
+    width: 33.33%;
+}
+
+.single-about-count h4 {
+    color: #42a5f5;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+
+.service-icon-two {
+        font-size: 50px;
+        height: 65px;
+        line-height: 62px;
+        width: 65px;
+    }
+</style>
+
+
+    <!--SERVICE AREA-->
+    <section class="service-area-two section-padding gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    
+                    <div class="area-title caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <h2>Welcome to Our Service</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                  <section class="about-area gray-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+                    <div class="about-left-content-area wow fadeIn">
+                        <img src="/assets/about-cargo.png" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                    <div class="about-content-area wow fadeIn">
+                        <div class="about-content">
+                            <h2>We have 25 years experience in this passion</h2>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
+                             
+                        </div>
+                        <div class="about-count">
+                            <div class="single-about-count">
+                                <h4><i class="fa fa-suitcase"></i> 120</h4>
+                                <p>Project Done</p>
+                            </div>
+                            <div class="single-about-count">
+                                <h4><i class="fa fa-thumbs-o-up"></i> 100</h4>
+                                <p>Project Done</p>
+                            </div>
+                            <div class="single-about-count">
+                                <h4><i class="fa fa-users"></i> 30</h4>
+                                <p>Project Done</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="service-content wow fadeIn">
+                        <h2>We offer <br>quick, powerful <br>logistics and <br> Human resource Solution</h2>
+                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you.</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                    <div class="service-two-content wow fadeIn">
+                        <div class="row no-margin">
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
+                                <div  >
+                                    <div class="service-icon-two"><i class="fa fa-ship"></i></div>
+                                    <h4>sea freight</h4>
+                                    <p>Lorem Ipsum is simply dummy text.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
+                                <div  >
+                                    <div class="service-icon-two"><i class="fa fa-dropbox"></i></div>
+                                    <h4>ware house</h4>
+                                    <p>Lorem Ipsum is simply dummy text.</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
+                                <div >
+                                    <div class="service-icon-two"><i class="fa fa-cog"></i></div>
+                                    <h4>consulting</h4>
+                                    <p>Lorem Ipsum is simply dummy text.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
+                                <div  >
+                                    <div class="service-icon-two"><i class="fa fa-bicycle"></i></div>
+                                    <h4>fast delevary</h4>
+                                    <p>Lorem Ipsum is simply dummy text.</p>
+                                </div>
+                            </div>
+                            <br>
+                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
+                                <div >
+                                    <div class="service-icon-two"><i class="fa fa-phone"></i></div>
+                                    <h4>temppp</h4>
+                                    <p>Lorem Ipsum is simply dummy text.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
+                                <div  >
+                                    <div class="service-icon-two"><i class="fa fa-car"></i></div>
+                                    <h4>fast delevarydfg</h4>
+                                    <p>Lorem Ipsum is simply dummy text.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+ <div class="service-bottom-area section-padding">
+            <div class="service-bottom-area-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-12 col-xs-12">
+                        <div class="service-list wow fadeIn">
+                            <div class="single-service">
+                                <div class="service-icon-hexagon">
+                                    <div class="hex">
+                                        <div class="service-icon">
+                                             
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4 style="color: #1e88e5;">Ware House</h4>
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                </div>
+                            </div>
+                            <div class="single-service">
+                                <div class="service-icon-hexagon">
+                                    <div class="hex">
+                                        <div class="service-icon"> </div>
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4 style="color: #1e88e5;">Road Freight</h4>
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                </div>
+                            </div>
+                            <div class="single-service">
+                                <div class="service-icon-hexagon">
+                                    <div class="hex">
+                                        <div class="service-icon"> </div>
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4 style="color: #1e88e5;">Sea Freight</h4>
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                </div>
+                            </div>
+                            <div class="single-service">
+                                <div class="service-icon-hexagon">
+                                    <div class="hex">
+                                        <div class="service-icon"> </div>
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4 style="color: #1e88e5;">Air Freight</h4>
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                </div>
+                            </div>
+                             <div class="single-service">
+                                <div class="service-icon-hexagon">
+                                    <div class="hex">
+                                        <div class="service-icon"> </div>
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4 style="color: #1e88e5;">new gen</h4>
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <div class="row">
+                     <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="service-catalouge-content-area wow fadeIn">
+                          <div class="service-catalouge-bg"></div>
+                            <div class="row">
+                              <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="catalouge-content" style="background-color: #1e88e5;">
+                                        <h2 style="color: white">Why Choose Us ?</h2>
+                                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you.</p>
+                                        <ul>
+                                            <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet, consectetur.</li>
+                                            <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
+                                            <li><i class="fa fa-check"></i> Nemo enim ipsam voluptatem .</li>
+                                            <li><i class="fa fa-check"></i> We denounce with righteous indignation.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+ <section id="twitter-service" class="parallax">
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="twitter-icon text-center">
+              <i class="fa fa-twitter"></i>
+              <h4>What client’s say about our Services</h4>
+            </div>
+            <div id="twitter-carousel-service" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+            <% @services.each_with_index do |index| %>
+               <div class='item <%= "active" if index == @services.first %>'>
+                     <%= content_tag :label,data: { slide_to: index}   %>
+                 </div>
+            <% end %>        
+        </div>                   
+            </div>                    
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#twitter-service-->
+
+
+
+       

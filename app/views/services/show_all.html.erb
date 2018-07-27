@@ -1,0 +1,42 @@
+<center>
+  <h2>Edit Service Testimony Page</h2>
+</center>
+<section class="blog-area vacancy-page section-padding">
+
+           <div class="row">
+        <% @services.each do |f|%>
+          <div class="col-sm-3 col-sm-offset-1 col-xs-12 col-xs-offset-1">
+            
+            <div class="member-info">
+                <div class="entry-content">
+            <span class="label label-info" > Company Name</span>  
+            <p  style="font-size: 16px; color: black;"><%=f.company_name%> </p>
+             <span class="label label-info"> Position and name </span>
+              <p  style="font-size: 16px; color: black;"><%=f.position%> </p>
+             <span class="label label-info"> Testimony</span>
+              <p  style="font-size: 16px; color: black;"><%=f.testimony%> </p>
+              <span class="label label-info"> Posted On </span>
+              <p  style="font-size: 13px; color: black;"><%=f.created_at %> </p>
+            </div>
+              </div><hr>
+              <% if admin_signed_in? %>
+                <%= link_to("Edit",  edit_service_path(f.id))%>
+                 <%= link_to "Delete", f, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger" %>
+               <%end%> <hr>
+        </div>
+    <%end%>
+ </div>
+ <%= will_paginate @services %> 
+ 
+ <center>
+ <div class="item" >
+        <div class="caption">
+           <% if admin_signed_in? %>
+              <%= link_to("Logout", destroy_admin_session_path, method: :delete, class: "btn btn-start " , style: "background-color: red;")%>
+              <%= link_to("Back To Admin Page", ad_page_index_path,class: "btn btn-start " , style: "background-color: green;")%>
+               <%= link_to("Add another Service Testimony", new_service_path,class: "btn btn-start " , style: "background-color: blue;")%>
+           <%end%> 
+         </div>
+      </div>
+      </center>
+  </section>  

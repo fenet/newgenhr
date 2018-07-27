@@ -1,0 +1,79 @@
+<title>Contact Show</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header id="home">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </header>
+  <section id="blog">
+    <div class="container">
+    <div class="row">
+      <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2> Companies We Work With</h2>
+         
+        </div>
+      </div>
+       
+        <div class="row">
+        <% @contacts.each do |f|%>
+          <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+       <span> <%= image_tag f.testimony_photo if f.testimony_photo?%></span>
+            </div>
+         <div class="member-info">
+                <h3 style="font-size: 16px; color: black;">  <%=f.testimony%> </h3>
+              </div>
+               </div>
+           </div>
+      <% if admin_signed_in? %>
+         <div class="row">
+    <%= link_to("Edit",  edit_contact_path(f.id))%>
+    <%= link_to "Delete", f, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger" %>
+        </div>
+        </div>
+           <%end%>              
+          </div> 
+           
+        <% end %>               
+      
+     </div><br></br>
+   <div class="row">
+    <center>
+      <div class="item" >
+        <div class="caption">
+           <% if admin_signed_in? %>
+              <%= link_to("Logout", destroy_admin_session_path, method: :delete, class: "btn btn-start " , style: "background-color: red;")%>
+              <%= link_to("Back To Admin Page", ad_page_index_path,class: "btn btn-start " , style: "background-color: green;")%>
+              <%= link_to("Add Another Testimony", new_contact_path,class: "btn btn-start " , style: "background-color: Blue;")%>
+           <%end%> 
+         </div>
+      </div>
+    </center>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

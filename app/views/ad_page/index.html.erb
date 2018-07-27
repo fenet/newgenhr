@@ -1,0 +1,62 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <center>
+
+    <h2>Welcome To New Generation Logistic & Human Resource Management PLC.<br> Administrator Page </h2>
+    </center>
+
+
+    
+
+
+    <div class="item " >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("Add News / Blog", new_blog_path,  class: "btn btn-start ",  style: "color: black;" )%>
+         <%= link_to("Edit & Delete News / Blog", blogs_path,  class: "btn btn-start ",  style: "color: black;" )%> 
+          </div>
+        </div>
+    
+        <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("Add Vacancy", new_vacancy_path,  class: "btn btn-start  ",  style: "color: black;" )%>
+            <%= link_to("Edit/Delete Vacancies", vacancies_path,  class: "btn btn-start  ",  style: "color: black;" )%>
+          </div>
+        </div>
+
+        <div class="item " >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("Add Home Testimony", new_contact_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           <%= link_to("Edit Home Testimony", contacts_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           </div>  
+        </div>
+
+        <div class="item " >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("Add Service Testimony ", new_service_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           <%= link_to("Edit Service Testimony", services_show_all_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           </div>  
+        </div>
+
+        
+ 
+        <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("View Cvs/Resume", cvs_path,  class: "btn btn-start  ",  style: "color: black;" )%>
+           <%= link_to("View Comments/Feedback", feedbacks_path ,  class: "btn btn-start  ",  style: "color: black;" )%>
+          </div>
+             <div class="row">
+    <center>
+      <div class="item" >
+        <div class="caption">
+           <% if admin_signed_in? %>
+              <%= link_to("Logout", destroy_admin_session_path, method: :delete, class: "btn btn-start " , style: "background-color: red;")%>
+           <%end%> 
+         </div>
+      </div>
+    </center>
+   </div>
+        </div>
+
+
+
+ 

@@ -1,0 +1,2 @@
+module AdPageHelper
+end

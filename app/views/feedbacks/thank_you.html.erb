@@ -1,0 +1,95 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+h2 {
+    font-size: 36px; 
+    color: #3c4a62;
+    margin: 0 0 15px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#anim {
+    font-size: 26px; 
+    
+    margin: 0 0 15px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+@keyframes example {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+
+/* The element to apply the animation to */
+#anim {
+
+    animation-name: example;
+    animation-duration: 20s;
+}
+
+
+.service-content h2::after {
+    border-bottom: 1px dashed rgb(243, 156, 18);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.area-title h2::before,
+.area-title h2::after {
+   
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.area-title h2::after {
+    background: #f39c12 none repeat scroll 0 0;
+    height: 4px;
+    width: 200px;
+}
+
+
+.area-title h2 {
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+</style>
+
+    <section class="service-area-two section-padding gray-bg">
+    <div class="row">
+                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2> Your Comment/Feedback has been Submited Succesfully Thank you for using <span style="color: #1e88e5;"> New Generation</span> logistics & Human Resource</h2>
+                        <h3 id="anim"> We Will Contact You Soon</h3>
+         <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("Back to Home Page", root_path,  class: "btn btn-start",  style: "color: black;" )%>
+        </div>
+        
+        </div>
+          </div>
+        </div>
+    </section>
