@@ -828,7 +828,7 @@ a {
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
             <div class="twitter-icon text-center">
-              <i class="fa fa-certificate fa-4x" ></i>
+              <i class="fa fa-certificate fa-4x" style="color: #1e88e5" ></i>
                <h4>What client’s say about our Services</h4>
             </div>
 
@@ -838,12 +838,13 @@ a {
             <% @services.each do |index| %>
                
                <div class='item <%= "active" if index == @services.first %>'> 
-                 <%= content_tag(:label, :data => { slide_to: index.company_name}) %>
+                 <%= index.company_name %>
+                 
                <div>
-                 <%= content_tag :label, :data => ({ slide_to: index.position}) %>
+                 <%= index.position %>
                </div>
                <div>  
-                 <%= content_tag :label, :data => ({ slide_to: index.testimony}) %>
+                <%= index.testimony %>
                </div>
 
                </div>

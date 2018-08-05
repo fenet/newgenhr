@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
   	@vacancy = Vacancy.order("created_at DESC").limit(3)
   	@blog = Blog.order("created_at DESC").limit(3)
   	@contact = Contact.order("created_at DESC").limit(4)
+  	@services = Service.order("created_at DESC").limit(3)
   end
 end
