@@ -18,9 +18,10 @@ class CreateCvs < ActiveRecord::Migration[5.0]
 	      t.string :type_of_organization
 
 	      t.string :skills
-	   #CV_upload
+	   	  #CV_upload
 	      t.string :upload_cv 
-      t.timestamps
+	      
+       t.timestamps
     end
   end
 end

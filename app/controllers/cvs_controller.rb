@@ -1,6 +1,6 @@
 class CvsController < ApplicationController
      #before_action :authenticate_admin!, except: [:new , :cv_complet]
-      before_action :authenticate_admin!, only: [:index ]
+  before_action :authenticate_admin!, only: [:index ]
   before_action :find_cv, only: [:edit, :update, :delete  ]
   
   def index
@@ -50,6 +50,7 @@ class CvsController < ApplicationController
       else
         render :new
      end
+
      #@cv=Cv.new(cv_doc_params)
       #if @cv.save
         #flash[:notice] = "Cv document Uploaded. Thanks!"
@@ -66,7 +67,7 @@ def destroy
   end
 
    def cv_params
-    params.require(:cv).permit(:cv_title,:job_category,:institution_name,:field_of_study,:admission_year,:graduation_year,:degree_level,:job_title,:company_name,:start_date,:end_date,:type_of_organization,:skills,:upload_cv)
+    params.require(:cv).permit(:cv_title,:job_category,:institution_name,:field_of_study,:admission_year,:graduation_year,:degree_level,:job_title,:company_name,:start_date,:end_date,:type_of_organization,:skills,:upload_cv, :phone_number, :email, :address)
   end
  
 

@@ -99,11 +99,11 @@ Your can only Filter Based on<strong> Job Catagory , Field of Study , Degree Lev
       <td><%=f.phone_number%> </td>
       <td><%=f.email%> </td>
       <td><%=f.address%> </td>
-
+      
       <td>
-<% if !f.upload_cv.nil? %>
-<%= link_to 'Download File', :action => 'download_file', :id => f.id %>
-<% end %>
+       <% if f.upload_cv? %>
+	<%= link_to 'Download File', :action => 'download_file', :id => f.id %>
+       <% end %>
       </td>
 
       <td><%=f.created_at%></td>

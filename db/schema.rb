@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180708152156) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -25,27 +25,27 @@ ActiveRecord::Schema.define(version: 20180708152156) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "blogs", force: :cascade do |t|
     t.integer  "admin_id"
     t.string   "blog_photo"
     t.string   "blog",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["admin_id"], name: "index_blogs_on_admin_id", using: :btree
+    t.index ["admin_id"], name: "index_blogs_on_admin_id"
   end
 
-  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string   "testimony",       null: false
     t.string   "testimony_photo", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  create_table "cvs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "cvs", force: :cascade do |t|
     t.string   "cv_title",             null: false
     t.string   "job_category",         null: false
     t.string   "institution_name"
@@ -60,14 +60,14 @@ ActiveRecord::Schema.define(version: 20180708152156) do
     t.string   "type_of_organization"
     t.string   "skills"
     t.string   "upload_cv"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "phone_number"
     t.string   "email"
     t.string   "address"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
   end
 
-  create_table "feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "feedbacks", force: :cascade do |t|
     t.string   "user_name",  null: false
     t.string   "email",      null: false
     t.string   "subject",    null: false
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20180708152156) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "services", force: :cascade do |t|
     t.string   "company_name", limit: 30,  null: false
     t.string   "position",     limit: 30,  null: false
     t.string   "testimony",    limit: 300, null: false
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20180708152156) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -97,11 +97,11 @@ ActiveRecord::Schema.define(version: 20180708152156) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "vacancies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "vacancies", force: :cascade do |t|
     t.integer  "admin_id"
     t.string   "vacancy_detail",   null: false
     t.string   "vacancy_catagory", null: false
@@ -109,9 +109,7 @@ ActiveRecord::Schema.define(version: 20180708152156) do
     t.string   "vacancy_photo"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["admin_id"], name: "index_vacancies_on_admin_id", using: :btree
+    t.index ["admin_id"], name: "index_vacancies_on_admin_id"
   end
 
-  add_foreign_key "blogs", "admins"
-  add_foreign_key "vacancies", "admins"
 end
