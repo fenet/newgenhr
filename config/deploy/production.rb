@@ -59,3 +59,18 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+set :application, "HR"
+set :rails_env, 'production'
+set :branch, "master"
+
+server '206.189.134.137', user: 'fena', roles: %w{web}, primary: true
+set :deploy_to, "/var/www/apps/#{fetch(:application)}"
+
+
+set :ssh_options, {
+    forward_agent: true,
+    #auth_methods: %w(password),
+    #password: 'pass',
+    user: 'fena',
+}
