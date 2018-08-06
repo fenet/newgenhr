@@ -1,11 +1,12 @@
 # Change these
 server '206.189.134.137', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/fenet/HR.git'
+set :repo_url,        'git@github.com:fenet/HR.git'
 set :application,     'HR'
 set :user,            'fena'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
+
 
 # Don't change these unless you know what you're doing
 set :pty,             true
@@ -83,8 +84,8 @@ end
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "HR"
+set :repo_url, "git@github.com:fenet/HR.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
