@@ -70,6 +70,7 @@ set :deploy_to, "/var/www/apps/#{fetch(:application)}"
 
 set :ssh_options, {
     forward_agent: true,
+    keys: %w(~/.ssh/id_rsa),
     #auth_methods: %w(password),
     #password: 'pass',
     user: 'fena',
