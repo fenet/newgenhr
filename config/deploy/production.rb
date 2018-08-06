@@ -55,7 +55,7 @@
     ssh_options: {
       user: "fena", # overrides user setting above
       keys: %w(/home/fena/.ssh/id_rsa),
-      forward_agent: true,
+      forward_agent: true
       #auth_methods: %w(publickey password)
       # password: "please use keys"
     }
