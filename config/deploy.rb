@@ -82,10 +82,10 @@ end
 
 
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.0"
-
-set :application, "HR"
-set :repo_url, "git@github.com:fenet/HR.git"
+#lock "~> 3.11.0"
+#
+#set :application, "HR"
+#set :repo_url, "git@github.com:fenet/HR.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
