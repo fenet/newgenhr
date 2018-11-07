@@ -60,10 +60,10 @@
 #     # password: "please use keys"
 #   }
 
-#set :application, "HR"
-#set :rails_env, 'production'
-#set :branch, "master"
-#
+# set :application, "HR"
+# set :rails_env, 'production'
+# set :branch, "master"
+
 #server '206.189.134.137', user: 'fena', roles: %w{web app db}, primary: true
 #set :deploy_to, "/var/www/apps/#{fetch(:application)}"
 #

@@ -1,0 +1,15 @@
+{
+  "short_name": "NewGen",
+  "name": "NewGeneration",
+  "icons": [
+    {
+      "src":"/assets/only_lofo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#000",
+  "theme_color": "#536878",
+  "display": "standalone"
+}

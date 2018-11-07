@@ -8,13 +8,12 @@
  <%= stylesheet_link_tag 'application', media: 'all' %>
  <%= javascript_include_tag 'application' %>
 
-
-
+<%= favicon_link_tag 'fav.png' %>
   </head>
 
   <body>
  
-     <% if current_page?(static_pages_faqs_path) ||  current_page?(vacancies_path) || current_page?(static_pages_aboutus_path) || current_page?(blogs_path) || current_page?(new_feedback_path) || current_page?(services_path) || current_page?(new_cv_path) || current_page?(cvs_cv_complet_path) || current_page?(ad_page_index_path)  || current_page?(new_cv_path) || current_page?(feedbacks_thank_you_path)  %>  
+     <% if current_page?(static_pages_faqs_path) ||  current_page?(vacancies_path) || current_page?(static_pages_aboutus_path) || current_page?(blogs_path) || current_page?(new_feedback_path) || current_page?(services_path) || current_page?(new_cv_path) || current_page?(cvs_cv_complet_path) || current_page?(ad_page_index_path)  || current_page?(new_cv_path) || current_page?(feedbacks_thank_you_path) | current_page?(static_pages_current_operation_path) | current_page?(static_pages_operation_path) %>  
      
         <%= render '/layouts/header' %>
     
@@ -23,7 +22,7 @@
 
 
     <%= yield %>
-     <% if current_page?(static_pages_faqs_path) || current_page?(root_path) || current_page?(vacancies_path) || current_page?(static_pages_aboutus_path) || current_page?(blogs_path) ||  current_page?(services_path) || current_page?(new_cv_path) || current_page?(cvs_cv_complet_path) %>
+     <% if current_page?(static_pages_faqs_path) || current_page?(root_path) || current_page?(vacancies_path) || current_page?(static_pages_aboutus_path) || current_page?(blogs_path) ||  current_page?(services_path) || current_page?(new_cv_path) || current_page?(cvs_cv_complet_path) | current_page?(static_pages_current_operation_path) | current_page?(static_pages_operation_path) %>
      
         <%= render '/layouts/footer' %>
     

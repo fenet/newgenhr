@@ -27,6 +27,10 @@ Rails.application.routes.draw do
 #
   get 'static_pages/aboutus'
 #
+get 'static_pages/operation'
+#
+#
+get 'static_pages/current_operation'
 #  get 'contacts/delete'
 #
 #  get 'contacts/edit'
