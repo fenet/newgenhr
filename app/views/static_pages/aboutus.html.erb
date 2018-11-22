@@ -8,9 +8,24 @@
         }
         e.preventDefault();
     });
+function switchVisible() {
+            if (document.getElementById('Diveng')) {
 
+                if (document.getElementById('Diveng').style.display == 'none') {
+                    document.getElementById('Diveng').style.display = 'block';
+                    document.getElementById('Divamh').style.display = 'none';
+                }
+                else {
+                    document.getElementById('Diveng').style.display = 'none';
+                    document.getElementById('Divamh').style.display = 'block';
+                }
+            }
+}
 </script> 
 <style type="text/css">
+#Divamh {
+  display: none;
+}
    #features-aboutus {
   text-align: center;
   background-image: url(/assets/aboutus-history.png);
@@ -175,9 +190,9 @@ h2 {
                 <div class="col-md-12 col-xs-12">
                     <ul class="  about-details-menu">
                      <center>
-                         <li class="scroll tb" ><a href="#company">Company Profile</a></li>
-                        <li class="scroll tb"><a href="#history">Our History</a></li> 
-                       <li class="scroll tb"><a href="#support">Client Support</a></li>  
+                         <li class="scroll tb" ><a href="#company">Company Profile <br>የድርጅቱ መገለጫ</a></li>
+                        <li class="scroll tb"><a href="#history">Our History <br> የኋላ ታሪክ</a></li> 
+                       <li class="scroll tb"><a href="#support">Client Support <br> የደንበኞች ድጋፍ</a></li>  
 
 
                     </center>
@@ -190,12 +205,13 @@ h2 {
     <div class="container">
       <div class="row">
                    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-                       <h2 style="font-size: 50px;" ><span style="color: #1e88e5">History Of</span> <strong> <span style="color: black;"> New Generation</strong></h2>
+                       <h2 style="font-size: 50px;" ><span style="color: #1e88e5">History Of</span> <strong> <span style="color: black;"> New Generation</strong> <br> <span style="color: #1e88e5" >የኔው ጄኔሬሽን ታሪክ <span></h2>
                    </div>
             </div>
     </div>
   </section><!--/#features-->
-              <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+
+  <!--            <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
                     <div class="tab-content about-details-content">
                         <div id="company" class="about-company tab-pane fade in active">
                             <div class="row">  
@@ -244,6 +260,7 @@ We have legal and valid licenses and quality assurance certificates that enable 
                         </div>
                       </div>
                     </div>
+
                   </div>
                   </section>
 
@@ -331,4 +348,268 @@ We have legal and valid licenses and quality assurance certificates that enable 
                         
  </section>
 
+-->
 
+
+<dir class="row">
+<input id="Button1" type="button" class="btn btn-primary" value="Translate" onclick="switchVisible();"/>
+</dir>
+
+<div id="Diveng">
+    <section id="english">
+ <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                    <div class="tab-content about-details-content">
+                        <div id="company" class="about-company tab-pane fade in active">
+                            <div class="row">  
+                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <p>New Generation Logistics, HR supply and Management plc is the trade name of a service providing company.
+Our company was founded in 1999 and has now accumulated 20 years of experience in the fastest growing economy on the continent.
+Our company began delivering its services at a time when the philosophy of outsourcing was at its infancy in Ethiopia. 
+Our logistics, HR supply and management services are designed by specialists and prominent professionals in the field with whose close collaboration we keep on improving our service delivery over time.
+Our company aims to continue revolutionising logistics (supply chain components), HR recruitment and management services by catering to the required standards with integrity and trustworthiness.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <p>Our modern and duly tailored management system supports our team in particular and majority of our service recipients in general to organize, mobilise, monitor, supervise and report all operations that the company is undertaking.
+With attentively controlled Quality Management Systems and an uncompromising work ethic, our service delivery points, control and supervisory team are availed and situated at a closer distance to each and every service recipient facilities as to be able to offer efficient, effective and comprehensive solutions for all services delivered by us. 
+To help ensure our service delivery work perfectly for you on site every time, per site communication and supervision is done on a regular bases.
+We have legal and valid licenses and quality assurance certificates that enable our company to provide our services nationwide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <h2 style="color: #1e88e5"><b>Our Mission</b></h2>
+                                        <p>Ensuring the availability of a reliable and efficient logistics and HR management services in the country assisted by research and development activities, best practice adoption and capacity building.</p> 
+                                    </div>
+                                </div> 
+                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <h2 style="color: #1e88e5"><b>Our Vision</b></h2>
+                                       To become the best logistics and human resource service provider company in Africa in the coming 10 years.<br>
+                                         
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <h2 style="color: #1e88e5"><b>Our Goal</b></h2>
+                                        <p>•    Delivering reliable and consistency services<br>
+                                            •   Working simultaneously with high team and spirit <br>
+                                            •   Treat all clients with high curtesy and compassion .</p> 
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                            <div class="row">
+                            
+                                <div class="row">
+                                    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                       <h2 ><span style="color: #1e88e5">Mile</span> <strong> Stone</strong></h2>
+                                 </div>
+                                     </div>
+                                <div class="heading text-center col-sm-8 col-sm-offset-2">
+                                    <div class="about-history-content history-list">
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2011</p>
+                                            </div>
+                                            <h4>we start our business</h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2012</p>
+                                            </div>
+                                            <h4>we co-opperate problem solution</h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2014</p>
+                                            </div>
+                                            <h4>we are expanding our network </h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2016</p>
+                                            </div>
+                                            <h4>we are serve worldwide </h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                             <div class="row parallax">
+                   <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                       <h2><span style="color: #1e88e5">Client</span><strong> <span style="color: black"> Support</span></strong></h2>
+                   </div>
+            </div>
+                        <div class="row">
+                                <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">  
+                                <div class="row">
+                               
+                                    <div class="single-promo">
+                                        <div class="promo-icon"><i class="fa fa-newspaper-o"></i></div>
+                                        <div class="promo-details">
+                                            <h3>Latest News</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-promo">
+                                        <div class="promo-icon"><i class="fa fa-umbrella"></i></div>
+                                        <div class="promo-details">
+                                            <h3>24/7 Support</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-promo">
+                                        <div class="promo-icon"><i class="fa fa-bicycle"></i></div>
+                                        <div class="promo-details">
+                                            <h3>Fast Delevery</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                               
+                                </div>
+                        </div>
+                        </section>
+</div>
+
+
+<div id="Divamh">
+    <section id="amaregna">
+ <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                    <div class="tab-content about-details-content">
+                        <div id="company" class="about-company tab-pane fade in active">
+                            <div class="row">  
+                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <p>የአዲስ ትውልድ ሎጅስቲክስ, የሰው ሃይል አስተዳደር እና ማኔጅመንት ኃ.የተ.የ.ማ. የኩባንያውን የንግድ ስም የንግድ ስም ነው.
+ኩባንያችን እ.ኤ.አ. በ 1999 የተመሰረተ ሲሆን አሁን በአህጉሪቱ በከፍተኛ ፍጥነት በማደግ ላይ ባለ ኢኮኖሚ ውስጥ የ 20 ዓመት ልምድ አግኝቷል.
+የውጭ ባለስልጣን ፍልስፍና በኢትዮጵያ ገና መጀመሩ በነበረበት ወቅት ድርጅታችን አገልግሎቱን መስጠት ጀመረ.
+የሎጂስቲክስ, የሰው ሃይል አቅርቦታችንና የአስተዳደር አገልግሎቶቻችን የተዘጋጁት በመስኩ ላይ ባሉ ልዩ ባለሙያተኞችን እና በመስክ አገልግሎት ውስጥ በቅርብ በመተባበር ነው.
+ኩባንያችን ለንጹህ ደረጃዎች በታማኝነት እና ታማኝነታቸውን በመሙላት ሎጅስቲክስ (የአቅርቦት ሰንሰለት ክፍሎች), የሰው ኃይል ምልመላ እና የአስተዳደር አገልግሎቶች አሻሽሎ ማቅረብ ነው.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <p>በዘመናችን እና በጥሩ ሁኔታ የተስተካከለ አመራር ስርዓታችን በተለይም ኩባንያችን ሁሉንም ስራዎች ለማደራጀት, ለማንቀሳቀስ, ለመቆጣጠር, ለመከታተል እና ሪፖርት ለማድረግ ለቡድናችን ድጋፍ ይሰጣል.
+በጥራት ቁጥጥር የተደረገባቸው የጥራት ማኔጅመንት ስርዓቶች እና ያልተቋረጠ የሥራ ሥነ ምህዳር, የአገልግሎት አሰጣጣችን ነጥቦች, ቁጥጥር እና ቁጥጥር ቡድን ለእያንዳንዳችን እና ለእያንዳንዱ አገልግሎት ተቀባይ መቀበያ ማዕከል በአጠቃላይ ለሁሉም, ለሁሉም ውጤታማ እና ሁሉን አቀፍ መፍትሄዎችን ለማቅረብ አቅራቢያ ቅርብ ነው. በኛ የቀረቡ አገልግሎቶች.
+በእያንዳንዱ ጣቢያ ላይ የእኛ የአገልግሎት አሰጣጥ በትክክል እንዴት እንደሚሰራ ለማረጋገጥ በጣቢያ ግንኙነት እና ክትትል ላይ በመደበኛነት ይከናወናል.
+ኩባንያዎቻችን አገራችንን በአገር አቀፍ ደረጃ ለማቅረብ እንዲችሉ ህጋዊ እና ትክክለኛ የሆኑ ፍቃዶችን እና የጥራት ማረጋገጫ ምስክር ወረቀቶች አሉን.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <h2 style="color: #1e88e5"><b>የእኛ ተልእኮ</b></h2>
+                                        <p>
+በምርምር እና በልማት እንቅስቃሴዎች የተደገፈ በአገሪቱ ውስጥ አስተማማኝ እና ውጤታማ የሆኑ ሎጅስቲክስ እና የሰው ኃይል አስተዳደር አገልግሎቶችን በአግባቡ መጠቀምን, ምርጥ ልምዶችን እና የአቅም ግንባታ ሥራዎችን ማረጋገጥ.</p> 
+                                    </div>
+                                </div> 
+                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <h2 style="color: #1e88e5"><b>የእኛ ራዕይ</b></h2>
+                                       
+በሚቀጥሉት 10 ዓመታት ውስጥ በአፍሪካ ምርጥ በሎጂስቲክስና እና የሰው ኃይል አገልግሎት ሰጪ ኩባንያ ለመሆን.<br>
+                                         
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                    <div class="about-history-content">
+                                        <h2 style="color: #1e88e5"><b>የኛ ዓላማ
+</b></h2>
+                                        <p> • አስተማማኝ እና ወጥ የሆነ አገልግሎት መስጠት<br>
+                                            •  ከከፍተኛ ቡድን እና መንፈስ ጋር በጋራ መሥራት<br>
+                                            •  ከፍተኛ ጓድንና ርህራሄ ያላቸውን ደንበኞች ሁሉ ያክብሩ.</p>                                     </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                            <div class="row">
+                            
+                                <div class="row">
+                                    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                       <h2 ><span style="color: #1e88e5">Mile</span> <strong> Stone</strong></h2>
+                                 </div>
+                                     </div>
+                                <div class="heading text-center col-sm-8 col-sm-offset-2">
+                                    <div class="about-history-content history-list">
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2011</p>
+                                            </div>
+                                            <h4>we start our business</h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2012</p>
+                                            </div>
+                                            <h4>we co-opperate problem solution</h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2014</p>
+                                            </div>
+                                            <h4>we are expanding our network </h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                        <div class="single-history">
+                                            <div class="history-year">
+                                                <p>2016</p>
+                                            </div>
+                                            <h4>we are serve worldwide </h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                             <div class="row parallax">
+                   <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+                       <h2><span style="color: #1e88e5">የደንበኞች</span><strong> <span style="color: black">  ድጋፍ</span></strong></h2>
+                   </div>
+            </div>
+                        <div class="row">
+                                <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">  
+                                <div class="row">
+                               
+                                    <div class="single-promo">
+                                        <div class="promo-icon"><i class="fa fa-newspaper-o"></i></div>
+                                        <div class="promo-details">
+                                            <h3>Latest News</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-promo">
+                                        <div class="promo-icon"><i class="fa fa-umbrella"></i></div>
+                                        <div class="promo-details">
+                                            <h3>24/7 Support</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-promo">
+                                        <div class="promo-icon"><i class="fa fa-bicycle"></i></div>
+                                        <div class="promo-details">
+                                            <h3>Fast Delevery</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                               
+                                </div>
+                        </div>
+                        </section>
+</div>

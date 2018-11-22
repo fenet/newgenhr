@@ -9,35 +9,45 @@
 }
 
 </style>
+<script type="text/javascript">
 
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'am,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+function switchVisible() {
+            if (document.getElementById('Diveng')) {
+
+                if (document.getElementById('Diveng').style.display == 'none') {
+                    document.getElementById('Diveng').style.display = 'block';
+                    document.getElementById('Divamh').style.display = 'none';
+                }
+                else {
+                    document.getElementById('Diveng').style.display = 'none';
+                    document.getElementById('Divamh').style.display = 'block';
+                }
+            }
 }
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</script>
 
  <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(assets/new_gen.png);height: 662px;">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome</h1>
+            <h1 class="animated fadeInLeftBig">Welcome <br> እንኳን ደህና መጡ</h1>
             <p class="animated fadeInRightBig"></p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now <br>ይጀምሩ</a>
           </div>
         </div>
         <div class="item" style="background-image: url(assets/2.jpg);height: 662px;">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">New <span > Generation  </span></h1>
-            <p class="animated fadeInRightBig">Human Resource & Logistic plc. </p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <h1 class="animated fadeInLeftBig">New <span > Generation  </span> <br>ኒው ጄኔሬሽን</h1>
+            <p class="animated fadeInRightBig">Human Resource & Logistic plc.<br> የሰው ሀይል ደቅርቦት እና ሎጅስቲክስ </p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now <br>ይጀምሩ</a>
           </div>
         </div>
         <div class="item" style="background-image: url(assets/3.jpg);height: 662px;">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">We are <span> Here For you</span></h1>
+            <h1 class="animated fadeInLeftBig">We are <span> Here For you</span><br> ምንግዜም አለንልዎ</h1>
             <p class="animated fadeInRightBig"> </p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now <br>ይጀምሩ</a>
           </div>
         </div>
       </div>
@@ -56,11 +66,14 @@ function googleTranslateElementInit() {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
          <div class="col-xs-offset-1">
             <h1><img class="img-responsive" src="/assets/log.png" alt="logo"></h1>
                </div>
         </div>
+
         <div class="collapse navbar-collapse dropdown">
+
           <ul class="nav navbar-nav navbar-right">
             <li class="scroll active"><a href="#home">Home</a></li>
             <li class="scroll"><a href="#services">Services</a></li>
@@ -71,12 +84,16 @@ function googleTranslateElementInit() {
             <li class="scroll"> <%= link_to("FAQs", static_pages_faqs_path)%></li>
             <li > <%= link_to("Upload CV", new_cv_path)%></li>
 
+
           </ul>
         </div>
       </div>
     </div><!--/#main-nav-->
   </header>
+  <input id="Button1" type="button" class="btn btn-primary" value="Translate" onclick="switchVisible();"/>
+<div id="Diveng">
       <section id="services">
+
     <div class="container">
       <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
         <div class="row">
@@ -119,7 +136,7 @@ function googleTranslateElementInit() {
 
         <div class="item" >
           <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-           <%= link_to("+ Read More", services_path,  class: "btn btn-start",  style: "color: black;" )%>
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", services_path,  class: "btn btn-start",  style: "color: black;" )%>
            </div>
         </div>
 
@@ -180,7 +197,7 @@ function googleTranslateElementInit() {
       <center>
       <div class="item" >
           <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-           <%= link_to("+ Read More", static_pages_aboutus_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", static_pages_aboutus_path,  class: "btn btn-start ",  style: "color: black;" )%>
           </div>
         </div>
         </center>
@@ -379,7 +396,7 @@ function googleTranslateElementInit() {
         <center>
       <div class="item" >
           <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms"">
-           <%= link_to("+ Read More", vacancies_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", vacancies_path,  class: "btn btn-start ",  style: "color: black;" )%>
         </div>
         </div>
         <div class="item" >
@@ -535,14 +552,500 @@ function googleTranslateElementInit() {
  </div>
         </div>
         </div>
-      </div>
+      <div>
        <center>
       <div class="item" >
           <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-           <%= link_to("+ Read More News", blogs_path,  class: "btn btn-start ",  style: "color: black;" )%>
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", blogs_path,  class: "btn btn-start ",  style: "color: black;" )%>
           </div>
         </div>
         </center>
-
     </div>
   </section><!--/#blog-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="Divamh">
+  <section id="services">
+
+    <div class="container">
+      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="row">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+            <h2> አንዳንድ አገልግሎቶቻችን</h2>
+            <p>አላማችን የርሶን ችግር ማቃለል ነው እርሶ ሌላ ንግድ ስራዎ ላይ እንዲያተኩሩ የብዙ አመት ልምዳችንን ተጠቅመን እናገለግሎታለን </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center our-services">
+        <div class="row">
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="service-icon">
+              <i class="fa fa-truck"></i>
+            </div>
+            <div class="service-info">
+              <h3>የሎጅስቲክ አገልግሎት</h3>
+              <p>የሎጂስቲክስ አገልግሎት አቅራቢዎች አስተዳደር ስራው የሎጅስቲክስ ስራዎችን ለሶስተኛ ወገን ማስገባት ነው. ኩባንያዎች ወይም ደንበኞች እነዚህ ሶስተኛ ወገን ሎጅስቲክስ አገልግሎት ይጠቀማሉ</p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
+            <div class="service-icon">
+              <i class="fa fa-umbrella"></i>
+            </div>
+            <div class="service-info">
+              <h3>የሰው ሀብት አቅርቦት </h3>
+              <p>የሰው ሃብት የጉልበት ፍላጎቶችን እና በንግድ ላይ የሚያስከትሏቸው ተፅእኖዎች ማቀድን ያካትታል.</p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
+            <div class="service-icon">
+              <i class="fa fa-cloud"></i>
+            </div>
+            <div class="service-info">
+              <h3>የአስተዳደር አገልግሎት</h3>
+              <p>የአገልግሎት አስተዳደር ኢንፎርሜሽን ቴክኖሎጂን ለማቅረብ ደንበኞች ላይ ያተኩራል . የአገልግሎት አስተዳደር ለደንበኛውም ሆነ ለደንበኛው ግንኙነት ዋጋ በመስጠት ላይ ያተኩራል</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", services_path,  class: "btn btn-start",  style: "color: black;" )%>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!--/#services-->
+<section id="about-us" class="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2 style="color: black;">ስለ እኛ</h2>
+            <p style="color: black;">ኒው ጄኔሬሽን የሎጂስቲክስ እና የሰው ሀብት አስተዳደር የሠው ኃይል እና ሎጅስቲክ ንግድ ከሚታወቁ ኩባንያዎች ውስጥ አንዱ ነው. ኩባንያችን ከ 20 ዓመታት በላይ በአገልግሎት አስቆጥሯል. ኩባንያችን እ.ኤ.አ. በ 1999 ተቋቋመ እና አሁን በአህጉሪቱ በከፍተኛ ፍጥነት በማደግ ላይ ባለ ኢኮኖሚ ውስጥ የ 20 ዓመት ልምድ አግኝቷል.
+</p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <p class="lead" style="color: black;">የተጠቃሚ ተሞክሮዎች</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    100%
+                 </div>
+             </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
+              <p class="lead" style="color: black;">ታማኝነት</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50"
+                aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                  100%
+                </div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <p class="lead" style="color: black;">አስተማማኝ</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                      100%
+                      </div>
+                  </div>
+                </div>
+                <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <p class="lead" style="color: black;">ባጠቃላይ</p>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+                  aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    100%
+                  </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+      </div>
+      <center>
+      <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", static_pages_aboutus_path,  class: "btn btn-start ",  style: "color: black;" )%>
+          </div>
+        </div>
+        </center>
+    </div>
+  </section><!--/#about-us-->
+
+   <hr>
+  <section id="design"><!--/items will be inserted here-->
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h2>የሰው ሀብት አቅርቦትና አያያዝ አገልግሎት</h2>
+          <p> ድርጅት ትልቅ እየሆነ ሲመጣ ሠራተኞቹን ለማስተዳደር እና ለመምራት በጣም አስቸጋሪ እና ጊዜን የሚጠየቅ መሆኑን እናውቃለን. እዚህ ላይ ነዉ የምንመጣዉ አስተማማኝ አጋር ለመሆን ነው. የሰው ሀብት ስራዎችዎ ላይ እኛ እንጨነቅበት እርሶ በስራዎ ላይ ማተኮር ይችላሉ.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+            <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/portfolio8.jpg" alt="">
+            </div>
+                    <h3 style="font-weight: bold; font-style: italic;">ምልመላ እና ምርጫ </h3>
+                    <p></p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/portfolio2.jpg" alt="">
+            </div>
+                    <h3 style="font-weight: bold; font-style: italic;">ስልጠና እና ልማት</h3>
+                    <p></p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/portfolio3.jpg" alt="">
+            </div>
+                    <h3 style="font-weight: bold; font-style: italic;">የሰው ሃይልን ማደራጀትና ማንቀሳቀስ</h3>
+                    <p></p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/portfolio4.jpg" alt="">
+            </div>
+          <h3 style="font-weight: bold; font-style: italic;">ጥቅማጥቅሞች እና የካሳ ቁጥጥር</h3>
+          <p></p>
+          </div>
+        </div>
+        <center>
+         <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("+ Show More ተጨማሪ አንብቡ", services_path,  class: "btn btn-start",  style: "color: black;" )%>
+          </div>
+        </div>
+        </center>
+      </div>
+    </div>
+    <div id="portfolio-single-wrap">
+      <div id="portfolio-single">
+      </div><!--/#items will end here-->
+    </div><!-- /#portfolio-single-wrap -->
+  </section><!--/#portfolio-->
+
+    <section id="design"><!--/items will be inserted here-->
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h2>የሎጅስቲክ አገልግሎት</h2>
+          <p>በጣም ጥሩ እና አስተማማኝ የሎጂስቲክስ አገልግሎት</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+           <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/transport-new-gen.jpg" alt="">
+            </div>
+                    <h3 style="font-weight: bold; font-style: italic;">የመጓጓዣ አክርቦት</h3>
+                    <p></p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/ware-house.jpg" alt="">
+            </div>
+                    <h3 style="font-weight: bold; font-style: italic;">የመጋዘን ክዋኔ</h3>
+                    <p></p>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/product-dist.jpg" alt="">
+            </div>
+                    <h3 style="font-weight: bold; font-style: italic;">የምርት ስርጭት</h3>
+                    <p></p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="assets/store_handling.jpg" alt="">
+            </div>
+          <h3 style="font-weight: bold; font-style: italic;">የስቶር አያያዝን ጨምሮ የመጋዘን ክወና</h3>
+          <p></p>
+          </div>
+        </div>
+        <center>
+         <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("+ Show More ተጨማሪ አንብቡ", services_path,  class: "btn btn-start ",  style: "color: black;" )%>
+          </div>
+        </div>
+        </center>
+      </div>
+    </div>
+    <div id="portfolio-single-wrap">
+      <div id="portfolio-single">
+      </div><!--/#items will end here-->
+    </div><!-- /#portfolio-single-wrap -->
+  </section><!--/#portfolio-->
+  <hr>
+   <section class="dorne-about-area section-padding-0-100">
+        <div class="container">
+        <div class="row">
+            <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+               <div class="row">
+                   <div class="text-center col-sm-8 col-sm-offset-2">
+                        <h2><span style="color: #1e88e5"> Companies We</span> are Serving <br> እኛ እያገለገልናቸው ያሉ ኩባንያዎች</h2>
+
+                   </div>
+               </div>
+            </div>
+         </div>
+
+
+ <div class="row">
+        <% @contact.each do |f|%>
+          <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+<span> <%= image_tag f.testimony_photo_url if f.testimony_photo?%></span>
+              </div>
+              <div class="member-info">
+                <h3><%= f.testimony%></h3>
+              </div>
+            </div>
+          </div>
+          <%end%>
+
+      </div>
+
+        </div>
+    </section>
+<hr>
+  <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2>Latest Vacancies from <strong style="color: #1e88e5"> New Generation</strong><br>አዳዲስ ክፍት የስራ መረጃ </h2>
+          <p>አዲስ ስራ, ወይም የሙያ ለውጥን እየፈለጉ ከሆነ, አንዳንዴ የሚፈልጉትን ስራ ለማየት ለመምረጥ እና ለመወሰን ከባድ ነው, እኛ ፍለጋዎን ለማቅለል እዚህ ተገኝተናል. አንዳንድ የእኛ የቅርብ ጊዜ የስራ ምደባዎች እነሆ.</p>
+        </div>
+      </div>
+      <div class=" vacancy-page section-padding ">
+        <div class="row">
+        <% @vacancy.each do |f|%>
+          <div class="col-sm-3 col-sm-offset-1 col-xs-12 ">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image col-xs-offset-2">
+  <div class="vacancy-image" style="width: 200px;height: 200px; ">
+<span style="width: 200px; height: 200px;"> <%= image_tag f.vacancy_photo if f.vacancy_photo?%></span>
+</div>
+              </div>
+              <div class="member-info">
+
+                <h3>የስራው ዝርዝር:<%= f.vacancy_detail%></h3>
+                <h4>ምድብ:<%= f.vacancy_catagory%></h4>
+                <h4>አካባቢ:<%= f.vacancy_location%></h4>
+
+              </div>
+            </div>
+          </div>
+          <%end%>
+
+        </div>
+        <center>
+      <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms"">
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", vacancies_path,  class: "btn btn-start ",  style: "color: black;" )%>
+        </div>
+        </div>
+        <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms"">
+
+           <%= link_to("Upload CV here, CV ይገንቡ ", new_cv_path,  class: "btn btn-start ",  style: "color: black;" )%>
+
+               <p><br><strong>ስራዎቻችንን ከወደዱት ለምን CVዎትን አያስገቡም?</strong></p>
+          </div>
+        </div>
+        </center>
+      </div>
+    </div>
+  </section><!--/#team-->
+
+  <section id="features" class="parallax">
+    <div class="container">
+      <div class="row count">
+        <div class="col-sm-3 col-md-offset-1 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <i class="fa fa-user"></i>
+          <h3 class="timer"> 400 <span><i class="fa fa-smile"></i></span>  ደስተኛ ደንበኞች</h3>
+        <!--  <p>Happy Clients</p> -->
+        </div>
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+          <i class="fa fa-desktop"></i>
+          <h3 class="timer">  2200  ሰራተኞች</h3>
+          <!--<p>Human Resources</p>-->
+        </div>
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="700ms">
+          <i class="fa fa-trophy"></i>
+          <h3 class="timer">22  የተለያዩ ከተሞች </h3>
+         <!--<p>Succesfull</p>-->
+        </div>
+      </div>
+    </div>
+  </section><!--/#features-->
+
+  <section id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2 style="font-family: serif;">እኛ  ምን ላይ ጥሩ ነን?</h2>
+          <p style="font-size: 16px;">ችሎታዎቻችንን እና ሀብታችንን ከተወዳዳሪዎችን ጋር በማወዳደር, ከተወዳዳሪዎቹ ጋር ሀብቶች አሉ, እርስዎ ሊያገኟቸው የሚችሏቸው ብዙ ነገሮች አሉ. አንዳንዶቹ:
+          </p>
+        </div>
+      </div>
+      <div class="pricing-table">
+        <div class="row">
+          <div class="col-sm-3" style="background-color: #e1f5fe;">
+            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+              <ul>
+                <li>• እንደ አውቶሜትድ የደመወዝ ሥርዓት እና የጥቅማ ጥቅም አስተዳደር የመሳሰሉ ጠቃሚ የሰው ሀብት ተግባራትን ማቀላጠፍ የሚችል የላቀ የሰዎች ሃብት ቴክኖሎጂ.</li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="col-sm-3" style="background-color: #e1f5fe;">
+            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+
+              <ul>
+                <li>• በእያንዳንዱ ጣቢያ ውስጥ ከላይ የተጠቀሱትን አገልግሎቶች በ 16 ዓመታት የአገልግሎት አሰጣጥ ተከናዉነዋል.</li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-3" style="background-color: #e1f5fe;">
+            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
+             <ul>
+                <li>• እውቅና ያለው እና ፈቃድ የተሰጠው በ 7 የተለያዩ የሃገሪቱ ክልሎች የኢትዮጵያ ፌዴራላዊ መንግስት ጨምሮ, እንዲሁም ዓለም አቀፍ እና ብሔራዊ ደንቦቻችንን እና ደንቦቻችንን ማክበር.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-sm-3" style="background-color: #e1f5fe;">
+            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
+              <ul>
+                <li>• ለደንበኞች ለደንበኞቻችን ልዩ ፍላጎቶች እና ለስራ ሃይል አስተዳደር አስተማማኝነት ያለው አገልግሎት የተጣለ የድጋፍ አገልግሎት መስጠት.
+</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#pricing-->
+
+  <section id="twitter" class="parallax">
+    <div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="twitter-icon text-center">
+              <i class="fa fa-certificate fa-4x" style="color: #1e88e5" ></i>
+               <h4>ደንበኛው ስለአገልግሎቶቻችንን የሚናገሩት</h4>
+            </div>
+
+           <div id="twitter-carousel-service" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+
+            <% @services.each do |index| %>
+
+               <div class='item <%= "active" if index == @services.first %>'>
+                 <%= index.company_name %>
+
+               <div>
+                 <%= index.position %>
+               </div>
+               <div>
+                <%= index.testimony %>
+               </div>
+
+               </div>
+
+            <% end %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#twitter-->
+
+  <section id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2><strong> ጦማር <span style="color:#1e88e5; "> & </span> ዜና </strong></h2>
+          <p>ከዚህ በታች የቅርብ ጊዜ ዜናዎችን ማግኘት ይችላሉ.</p>
+        </div>
+      </div>
+      <div class="blog-area blog-page section-padding">
+
+        <div class="row">
+        <% @blog.each do |f|%>
+        <div class="col-sm-3 col-sm-offset-1 col-xs-12 col-xs-offset-1">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+              <div class="blog-image" style="width: 200px;height: 200px; ">
+<span style="width: 200px; height: 200px;"> <%= image_tag f.blog_photo if f.blog_photo?%></span>
+</div>
+              </div><br>
+
+            </div><hr>
+            <div class="member-info">
+                <p style="font-family: serif;"><%=f.blog%></p>
+              </div><hr><br>
+
+        </div>
+    <%end%>
+ </div>
+        </div>
+        </div>
+      <div>
+       <center>
+      <div class="item" >
+          <div class="caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+           <%= link_to("+ Read More ተጨማሪ አንብቡ", blogs_path,  class: "btn btn-start ",  style: "color: black;" )%>
+          </div>
+        </div>
+        </center>
+    </div>
+  </section><!--/#blog-->
+
+
+</div>

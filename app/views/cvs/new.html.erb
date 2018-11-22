@@ -101,7 +101,7 @@ if (window.location.href.substr(-2) !== '?r')
            <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
            <div class="area-title text-center wow fadeIn">
            <br>
-          <h2><b>Please Fill The Form Below</b></h2>
+          <h2><b>Please Fill The Form Below / እባኮ ከስር የሚገየውን ባዶ ቦታ ይሙሉ</b></h2>
           <p>New Generation Human Resource & Logistics CV Form. </p>
         </div>
       </div>
@@ -117,13 +117,13 @@ if (window.location.href.substr(-2) !== '?r')
 <div class="col-md-3">
 <ul class="nav nav-pills   nav-stacked">
 
-  <li class="active "><a data-toggle="pill" href="#personal"><span class="glyphicon glyphicon-education"></span> Educational Background
+  <li class="active "><a data-toggle="pill" href="#personal"><span class="glyphicon glyphicon-education"></span> Educational Background<br> የትምህርት ዳራ
    (<span style="color: red;">*</span>)</a></li>
-  <li><a data-toggle="pill" href="#work"><span class="glyphicon glyphicon-briefcase"></span> Work Experiance</a></li>
-  <li><a data-toggle="pill" href="#skill"><span class="glyphicon glyphicon-plus-sign"></span> Additional Skills </a></li>
+  <li><a data-toggle="pill" href="#work"><span class="glyphicon glyphicon-briefcase"></span> Work Experiance የስራ ልምድ</a></li>
+  <li><a data-toggle="pill" href="#skill"><span class="glyphicon glyphicon-plus-sign"></span> Additional Skills ተጨማሪ ክህሎቶች </a></li>
   <li>
-  <a data-toggle="pill" href="#contact"><span class="glyphicon glyphicon-earphone"></span> Contact Address (<span style="color: red;">*</span>)</a></li>
-  <li><a data-toggle="pill" href="#cv_file"><span class="glyphicon glyphicon-file"></span> Resume File Upload
+  <a data-toggle="pill" href="#contact"><span class="glyphicon glyphicon-earphone"></span> Contact Address የተጠሪ አድራሻ(<span style="color: red;">*</span>)</a></li>
+  <li><a data-toggle="pill" href="#cv_file"><span class="glyphicon glyphicon-file"></span> Resume File Upload <br> ከድሞ የተሰራ ፋይል ካለ ይሄን ይተከሙ
 <div class="alert alert-danger">
   If you Already has a<strong> Resume Document</strong> Upload Here.
 </div>
@@ -131,7 +131,9 @@ if (window.location.href.substr(-2) !== '?r')
 </ul>
 </div>
 <div class="tab-content">
- <p>Fields marked with an asterisk ( <span style="color: red;">*</span>  ) are mandatory</p>
+ <p>Fields marked with an asterisk ( <span style="color: red;">*</span>  ) are mandatory <br>
+ኮከብ የተደረገባቸው ቦታዎች መሞላት አለባቸው
+ </p>
  
  
   <div id="cv_file" class="tab-pane fade">
@@ -149,29 +151,29 @@ if (window.location.href.substr(-2) !== '?r')
         </ul>
       </div>
     <%end %>
-        <legend><span class="label label-info">Already have A CV Document, Upload Here</span></legend>
+        <legend><span class="label label-info">Already have A CV Document, Upload Here አሁን የ CV ሰነድ አለዎት, እዚህ ይስቀሉ</span></legend>
 
           <div class="col s12 col-lg-4">
-        <span class="label label-info">Full Name <span style="color: red;">( * )</span></span> 
+        <span class="label label-info">Full Name (ሙሉ ስም) <span style="color: red;">( * )</span></span> 
 <br><br>
        
   <%= e.text_field :cv_title, maxlength: 40, :size=>"40" ,  :required => true ,class: "form-control" %>
   </div>
   <div class="col s12 col-lg-4">
-  <span class="label label-info">Field of Study <span style="color: red;">( * )</span></span> 
+  <span class="label label-info">Field of Study (ያተኑት ትምህርት) <span style="color: red;">( * )</span></span> 
 <br><br>
    <%= e.text_field :field_of_study,  maxlength: 200 ,  :required => true ,class: "form-control" %>
 </div>
    <div class="col s12 col-lg-4">
-  <span class="label label-info">Job Catagory <span style="color: red;">( * )</span></span>
+  <span class="label label-info">Job Catagory (የስራው አይነት) <span style="color: red;">( * )</span></span>
   <br><br>
   <%= e.text_field :job_category,  maxlength: 40, :size=>"40" ,  :required => true ,class: "form-control" %>
   <br>
-
+ 
   </div>
   <div class="row">
 <div class="col s12 col-lg-4">
-    <span class="label label-info">Higher Education Level / Degree Level <span style="color: red;">( * )</span></span> <br><br>
+    <span class="label label-info">Higher Education Level የትምህርት ደረጃ  <span style="color: red;">( * )</span></span> <br><br>
        <%= e.select(:degree_level,  [['TVTE', 'TVTE'],['High School', 'High School'], ['Certification', 'Certification'], ['Vocational', 'Vocational'], ['Associate Degree', 'Associate Degree'], ['Bachelor', 'Bachelor'], ['Masters', 'Masters'], ['Doctorate', 'Doctorate'] , ['Advanced Diploma' , 'Advanced Diploma'] , ['Post Graduate Diploma' , 'Post Graduate Diploma'] , ['Professional' , 'Professional'] , ['Other' , 'Other']   ])  %>
         </div>
 
@@ -213,11 +215,11 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
   <div id="personal" class="tab-pane fade in active ">
            <div class=" input-field col s12">
         <fieldset>
-        <legend> Build CV</legend>
+        <legend> Build CV / CV ይገንቡ</legend>
        
           <div class="col s12 col-lg-4">
           <br>
-        <span class="label label-info " for="inputlg">Full Name <span style="color: red;">( * )</span></span> 
+        <span class="label label-info " for="inputlg">Full Name ሙሉ ስም<span style="color: red;">( * )</span></span> 
         <br>  <br>
   <%= f.text_field :cv_title,  maxlength: 40, :size=>"40" ,  :required => true ,class: "form-control input-default" ,:id=>"inputdefault" ,
   :type=>"text" %>
@@ -225,13 +227,13 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
 
   <div class="col s12 col-lg-4">
   <br>
-    <span class="label label-info">Field Of Study <span style="color: red;">( * )</span></span> 
+    <span class="label label-info">Field Of Study የትምህርት መስክ<span style="color: red;">( * )</span></span> 
     <br><br>
      <%= f.text_field :field_of_study,  maxlength: 200 ,  :required => true ,class: "form-control" %>
      </div>
      <div class="col s12 col-lg-4 ">
      <br>
-   <span class="label label-info">Name of Institution <span style="color: red;">( * )</span></span>
+   <span class="label label-info">Name of Institution የተቋሙ ስም<span style="color: red;">( * )</span></span>
    <br><br> 
     <%= f.text_field :institution_name, maxlength: 60, :required => true,  class: "form-control" %>
     </div>
@@ -240,7 +242,7 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
 <div class="row input-field col s12">
     <div class="col s12 col-lg-4 ">
     <br>
-  <span class="label label-info">Job Category <span style="color: red;">( * )</span></span> <!-- should be dropdown-->
+  <span class="label label-info">Job Category የስራ ምድብ <span style="color: red;">( * )</span></span> <!-- should be dropdown-->
   <br> 
   <br>
  <%= f.select(:job_category ,[['Accountant', 'Accountant'] , ['Assistant', 'Assistant'] , ['Business Devt head','Business Devt head'],
@@ -252,16 +254,16 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
 </div>
 <div class="col s12 col-lg-4 col-md-pull-0">
 <br>
-       <span class="label label-info">Higher Education Level / Degree Level <span style="color: red;">( * )</span></span> <br><br>
+       <span class="label label-info">Higher Education Level የከፍተኛ ትምህርት ደረጃ / የብቃት ደረጃ <span style="color: red;">( * )</span></span> <br><br>
        <%= f.select(:degree_level,  [['TVTE', 'TVTE'],['High School', 'High School'], ['Certification', 'Certification'], ['Vocational', 'Vocational'], ['Associate Degree', 'Associate Degree'], ['Bachelor', 'Bachelor'], ['Masters', 'Masters'], ['Doctorate', 'Doctorate'] , ['Advanced Diploma' , 'Advanced Diploma'] , ['Post Graduate Diploma' , 'Post Graduate Diploma'] , ['Professional' , 'Professional'] , ['Other' , 'Other']   ])  %>
         </div>
         </div>
 
     <div class="col-md-4 col-md-offset-3">
     <br>
-    <span class="label label-info">Admission Year <span style="color: red;">( * )</span></span> 
+    <span class="label label-info">Admission Year የመግቢያ ዓመት<span style="color: red;">( * )</span></span> 
      <%= f.date_field :admission_year, :required => true , :start_year=>1950, class: "form-control form-group" %>
-     <span class="label label-info">Graduation Year <span style="color: red;">( * )</span></span>
+     <span class="label label-info">Graduation Year የምረቃ አመት <span style="color: red;">( * )</span></span>
        <%= f.date_field :graduation_year,  :required => true , :start_year=>1950 ,class: "form-group form-control" %>
     
        </div>
@@ -269,8 +271,8 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
     <br>
      <div class="input-field col s12">
      <div class="col s12 col-lg-4 col-md-offset-5 col-xs-offset-2"><br>
-     <a class="btn btn-default btn-lg btn-round btn-line disabled next" data-toggle="pill" href="#"  ><span class="glyphicon glyphicon-backward"></span> Previous</a> 
-    <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#work"  > Next <span class="glyphicon glyphicon-forward"></span> </a> 
+     <a class="btn btn-default btn-lg btn-round btn-line disabled next" data-toggle="pill" href="#"  ><span class="glyphicon glyphicon-backward"></span> Previous ወደኋላ</a> 
+    <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#work"  > Next ቀጥሎ <span class="glyphicon glyphicon-forward"></span> </a> 
 </div>
 </div>
 
@@ -280,30 +282,30 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
             <fieldset>
         <legend>Work Experiance / Career Level</legend>
         <div class="input-field col s12 col-lg-4">
-        <span class="label label-info">Job Title</span> 
+        <span class="label label-info">Job Title የስራ መደቡ መጠሪያ</span> 
         <br><br>
          <%= f.text_field :job_title, maxlength: 200 ,  class: "form-control" %>
          </div>
          <div class="input-field col s12 col-lg-4">
-         <span class="label label-info">Company Name</span> 
+         <span class="label label-info">Company Name የድርጅት ስም</span> 
          <br><br>
           <%= f.text_field :company_name, maxlength: 20 ,  class: "form-control" %>
           </div>
             <div class="input-field col s12 col-lg-4">
-            <span class="label label-info">Type of Organization</span> 
+            <span class="label label-info">Type of Organization የድርጅቱ አይነት</span> 
             <br><br>
              <%= f.text_field :type_of_organization,  maxlength: 200 ,  class: "form-control" %>
              </div>
              <br><br>
     <div class="input-field col s12 col-lg-4">
 <br>
-          <span class="label label-info">Start Date</span>
+          <span class="label label-info">Start Date የመጀመሪያ ቀን</span>
            <%= f.date_field :start_date, :start_year=>1950, class: "form-control "  %>
            </div>
            <br> 
            <div class="input-field col s12 col-lg-4">
            <br>
-           <span class="label label-info">End Date</span>
+           <span class="label label-info">End Date የማብቂያ ቀን</span>
             <%= f.date_field :end_date,:start_year=>1950, class: "form-control" %>
            </div>
             
@@ -312,18 +314,19 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
            </fieldset><br><br><br>
                <div class="input-field col s12">
                  <div class="col s12 col-lg-4 col-md-offset-4 col-xs-offset-2">
-                  <a class="btn btn-default btn-lg btn-round btn-line next" data-toggle="pill" href="#personal"  ><span class="glyphicon glyphicon-backward"></span>  Previous</a> 
-                  <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#skill">Next <span class="glyphicon glyphicon-forward"></span> </a> 
+                  <a class="btn btn-default btn-lg btn-round btn-line next" data-toggle="pill" href="#personal"  ><span class="glyphicon glyphicon-backward"></span>  Previous ወደኋላ
+</a> 
+                  <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#skill">Next ቀጥሎ<span class="glyphicon glyphicon-forward"></span> </a> 
                 </div>
               </div>
   </div>
   <div id="skill" class="tab-pane fade">
 
     <fieldset>
-        <legend>Additional Skill</legend>
+        <legend>Additional Skill ተጨማሪ ክህሎቶች</legend>
     <div class="input-field col s12">
 
-             <span class="label label-info">Additional Skills </span> 
+             <span class="label label-info">Additional Skills ተጨማሪ ክህሎቶች </span> 
              <br><br>
               <%= f.text_area :skills,   maxlength: 400 , class: "form-control" ,
 :rows=>"5" ,:id=>"comment" %>
@@ -332,8 +335,9 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
              <div class="input-field col s12">
      <div class="col s12 col-lg-4 col-md-offset-3 col-xs-offset-2">
      <br><br>
-                    <a data-toggle="pill" href="#work" class="btn btn-default btn-lg btn-round btn-line next" ><span class="glyphicon glyphicon-backward"></span>  Previous</a>
-                 <a data-toggle="pill" href="#contact" class="btn btn-default btn-lg btn-round btn-line prev" >Next <span class="glyphicon glyphicon-forward"></span> </a>
+                    <a data-toggle="pill" href="#work" class="btn btn-default btn-lg btn-round btn-line next" ><span class="glyphicon glyphicon-backward"></span>  Previous ወደኋላ</a>
+                 <a data-toggle="pill" href="#contact" class="btn btn-default btn-lg btn-round btn-line prev" >Next 
+ቀጥሎ<span class="glyphicon glyphicon-forward"></span> </a>
                 </div>
               </div>
   </div>
@@ -343,20 +347,20 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
         <legend>Contact Address</legend>
   <div class="input-field col s12 col-lg-4">
   <br>
-        <span class="label label-info ">Email <span style="color: red;">( * )</span></span> 
+        <span class="label label-info ">Email ኢሜይል <span style="color: red;">( * )</span></span> 
         <br><br>
          <%= f.text_field :email, maxlength: 40 ,   class: "form-control", :type=>"email" %>
          </div>
          <div class="input-field col s12 col-lg-4">
          <br>
-         <span class="label label-info">Phone Number <span style="color: red;">( * )</span></span> 
+         <span class="label label-info">Phone Number ስልክ ቁጥር <span style="color: red;">( * )</span></span> 
          <br><br>
           <%= f.text_field :phone_number,  maxlength: 13 ,    class: "form-control", :type=>"number" %>
           </div>
          
             <div class="input-field col s12 col-lg-4">
             <br>
-            <span class="label label-info">Address</span> 
+            <span class="label label-info">Address አድራሻ</span> 
             <br><br>
              <%= f.text_area :address, maxlength: 100 ,  class: "form-control ", :type=>"text" %>
             
@@ -366,7 +370,7 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
               <div class="col s12 col-lg-4 col-md-offset-3">
                  <br>
                    <a data-toggle="pill" href="#skill" class="btn btn-default btn-lg btn-round btn-line prev" ><span class="glyphicon glyphicon-backward"></span> Previous</a> <br><br><br>
-                    <%= f.button "Submit CV/Resume", class: "btn btn-success" %>
+                    <%= f.button "Submit CV/Resume ልምድ ማስረጃችሁን አስገባ", class: "btn btn-success" %>
           <button type="reset" class="btn btn-default" >Clear Form</button>
             <%end%> 
               </div>
