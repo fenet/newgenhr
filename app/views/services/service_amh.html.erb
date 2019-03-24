@@ -1,5 +1,4 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style type="text/css">
 
   *--------------------
@@ -617,63 +616,84 @@ a {
         line-height: 62px;
         width: 65px;
     }
-    .btn_lang {
-  background-color: #028fcc;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  padding: 20px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-   float: right;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-    border-radius: 10px;
+.btn_lang {
+      background-color: #028fcc;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 16px;
+      padding: 20px;
+      width: 120px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+       float: right;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border-radius: 10px;
 }
 
 .btn_lang span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
 }
 
 .btn_lang span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
 }
 
 .btn_lang:hover span {
-  padding-right: 25px;
+      padding-right: 25px;
 }
 
 .btn_lang:hover span:after {
-  opacity: 1;
-  right: 0;
+      opacity: 1;
+      right: 0;
 }
 </style>
-
- <%= link_to("ወደ አማርኛ", services_service_amh_path,  class: "btn_lang")%>
-    <!--SERVICE AREA-->
-    <section id="deveng">
-    <div id="Diveng">
-    <section class="service-area-two section-padding gray-bg">
+<div class="main-nav"  >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>                    
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll "><%= link_to("Home", root_path)%> </li>
+            <li class="scroll "><%= link_to("አገልግሎት", services_path)%> </li> 
+            <li class="scroll "><%= link_to("ስለ እኛ", static_pages_aboutus_path)%> </li> 
+             <li class="scroll"><%= link_to("ዜና እና ብሎጎች", blogs_path)%>  </li>  
+            <li class="scroll"><%= link_to("ስራዎች", vacancies_path)%>  </li>
+            <li class="scroll"> <%= link_to("አግኙን", new_feedback_path)%>  </li>
+            <li class="scroll"> <%= link_to("ተደጋጋሚ ጥያቄዎች", static_pages_faqs_path)%></li>
+            <li class="scroll"> <%= link_to("cv ላክ", new_cv_path)%></li>
+     
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+ <%= link_to("To English", services_path,  class: "btn_lang")%>
+    <div id="Divamh">
+   <!-- <section class="service-area-two section-padding gray-bg">-->
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
-                    
                     <div class="area-title caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <h2>Welcome to Our Service</h2>
-                        <p>We’re in the business of stress relief therapy. We specialize in taking your headaches and freeing up your time to focus on other aspects of your business. Our services are aimed at finding Afri-CAN solutions to African problems. </p>
+                        <h2>ወደ አገልግሎታችን እንኳን ደህና መጡ</h2>
+                        <p>አላማችን የርሶን ችግር ማካለል ኔው እርሶ ሌላ ንግድ ስራዎ ላይ እንዲያተኩሩ የብዙ አመት ልምዳችንን ተጠክመን እናገለግሎታለን  </p>
                     </div>
                 </div>
             </div>
@@ -690,15 +710,15 @@ a {
                 <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
                     <div class="about-content-area wow fadeIn">
                         <div class="about-content">
-                            <h2>We have gathered over 16 years of experience...</h2>
-                            <p>... In these years we’ve worked with various organizations comprised of both for profit and aid organizations. We’ve worked with manufacturers, Distributors, Government agencies, service providers, Nongovernmental organizations and even Consumer’s. You can find a list of our clients on this links .
-              <%= link_to("See Current Operations", static_pages_current_operation_path,  class: "btn btn-start" )%>  <%= link_to("Previous Operations", static_pages_operation_path,  class: "btn btn-start")%></p>
+                            <h2>ከ 16 ዓመታት በላይ ልምድ አካብተናል ...</h2>
+                            <p>... በእነዚህ ዓመታት ለትርፍ እና እርዳታ ዴርጅቶች የተዋቀሩ ከተለያዩ ድርጅቶች ጋር ሰርተናል. አምራቾች, አሰራጮች, የመንግስት ወኪሎች, አገልግሎት ሰጪዎች, መንግስታዊ ያልሆኑ ድርጅቶች እና ሌላው ቀርቶ የሸማቾች ተጠቃሚዎችን ሰርተናል. በዚህ አገናኞች ላይ የእኛን ደንበኞች ዝርዝር ማግኘት ይችላሉ .
+              <%= link_to("የአሁኑ ክወናዎች ይመልከቱ", static_pages_current_operation_path,  class: "btn btn-start" )%>  <%= link_to("ቀዳሚ ክወናዎች", static_pages_operation_path,  class: "btn btn-start")%></p>
                              
                         </div>
                         <div class="about-count">
                             <div class="single-about-count">
                                 <h4><i class="fa fa-suitcase"></i> 120</h4>
-                                <p>Project Done <br>
+                                <p>ፕሮጀክት ተከናውኗል <br>
                              </p>
                             </div>
                             <div class="single-about-count">
@@ -723,15 +743,16 @@ a {
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
                     <div class="area-title caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <h2 style="font-size: 36px;"> Human Resource Management and supply</h2>
-                        <p>We understand that the larger an organization is and the wider its operation’s the more difficult and time consuming it is to manage and administrate its staff. This is where we come in to be a reliable partner. Let us take your HR functions and you can focus on your operations. Imagine that   </p>
+                        <h2 style="font-size: 36px;"> የሰው ሀብት አስተዳደር እና አቅርቦት</h2>
+                        <p>ትልቁ ድርጅት እና ሠራተኞቹን ለማስተዳደር እና ለማስተዳደር በጣም አስቸጋሪ እና ጊዜን የሚጨምር. እዚህ የምንመጣበት አስተማማኝ አጋር ለመሆን ነው. የእርስዎን የሂኤን ስራዎች እንውሰድና በስራዎ ላይ ማተኮር ይችላሉ. </p>
                     </div>
                 </div>
 </div>
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="service-content wow fadeIn">
-                        <h2>We offer <br>quick, powerful <br>logistics and <br> Human resource Solution</h2>
+                        <h2>ፈጣንና አስተማማኝ <br>ሎጅስቲክስ እና <br> የሰው ሃይል መፍትሄ እናቀርባለን</h2>
+
                         <p> </p>
                         
                     </div>
@@ -742,15 +763,15 @@ a {
                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
                                 <div  >
                                     <div class="service-icon-two"><i class="fa fa-ship"></i></div>
-                                    <h4>Recruitment and selection </h4>
-                                    <p>You’ve identified that your organization needs to employ additional staff for a department or section but the process of pooling and choosing a suitable candidate from applicants to fill the post is time consuming. Why don’t you allow New Generation to handle these HR functions for you? .</p>
+                                    <h4>ምልመላ እና ምርጫ </h4>
+                                    <p>ድርጅትዎ ለአንድ ዲፓርትመንት ወይም ክፍል ተጨማሪ ሠራተኞችን መቅጠር እንዳለበት ተገንዝበዋል ነገር ግን ተስማሚ እጩዎች ከስራ አመልካቾች ልጥፉን ለመሙላት እና ለመምረጥ ሂደት በጣም ጊዜ ይወስዳል. ለምንድን ነው ኒው ጄኔሬሽን  የ HR አገልግሎትን ለእርስዎ እንዲይዝ የማያደርጉት?? </p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
                                 <div  >
                                     <div class="service-icon-two"><i class="fa fa-dropbox"></i></div>
-                                    <h4>Training and development</h4>
-                                    <p>You want to organize a seminar for bettering the job performance of your staff. We can help you identify, organize and execute Training and development needs and arrange training programs and bolster your staff’s performance.</p>
+                                    <h4>ስልጠና እና ልማት</h4>
+                                    <p>የሰራተኞችዎን የሥራ ክንውን ለማሻሻል ሴሚናር ማዘጋጀት ይፈልጋሉ. የማሰልጠኛና የልማት ፍላጎቶችን ለይቶ ለማወቅ, ለማደራጀትና ለመተግበር ልናግዝዎ እንችላለን, የስልጠና መርሃ ግብሮችን ያቀናብሩ እና የሰራተኛዎትን የሥራ አፈጻጸም ያሳድጉ.</p>
                                 </div>
                             </div>
                             <br>
@@ -758,23 +779,23 @@ a {
                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding col-md-pull-6">
                                 <div > <br>
                                   <!--  <div class="service-icon-two"><i class="fa fa-cog"></i></div> -->
-                                    <h4>Benefits and compensation management</h4>
-                                    <p>As a sub-discipline of human resources management, compensation and benefits are a major function to ensure that your staff is motivated and stays happy. While compensation and benefits are tangible, there are intangible rewards such as recognition, work-life and development. We can help by becoming a reliable partner in ensuring your staff feels your appreciation. </p>
+                                    <h4>ጥቅማጥቅሞች እና የካሳ ቁጥጥር</h4>
+                                    <p>የሰራተኛ ሃላፊዎች, ማካካሻ እና ጥቅማ ጥቅሞች የእርስዎ ሰራተኛ ተነሳሽነት እና ተነሳሽ መሆኑን ማረጋገጥ ዋና ተግባር ነው. ካሳ እና ጥቅማ ጥቅሞች ተጨባጭ ናቸው, እንደ እውቅና, የስራ-ህይወት እና ልማት የመሳሰሉ አታዊነት ሽልማቶች አሉ. የእርስዎ ሰራተኛ አድናቆትዎን እንዲሰማው ለማድረግ ታማኝ አጋር በመሆን በመርዳት ልንረዳዎ እንችላለን. </p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
                                 <div  >
                                   <!--  <div class="service-icon-two"><i class="fa fa-bicycle"></i></div>-->
-                                    <h4>Organizing and mobilizing workforce</h4>
-                                    <p>We can help in equipping your staff to take on new responsibilities or move quickly into new roles as your business may require.</p>
+                                    <h4>የሰው ሃይልን ማደራጀትና ማንቀሳቀስ</h4>
+                                    <p>ሰራተኞቻችን አዲስ ሀላፊነቶችን እንዲወስዱ ወይም ንግድዎ ስለሚያስፈልጋቸው በአዳዲስ ሚናዎች እንዲንቀሳቀሱ ማድረግ እንችላለን.</p>
                                 </div>
                             </div>
                             <br>
                              <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
                                 <div >
                                    <!-- <div class="service-icon-two"><i class="fa fa-phone"></i></div> -->
-                                    <h4>Payroll management-</h4>
-                                    <p>New Generation can handle your pay roll Functions. This might involve balancing and reconciling payroll data, depositing and reporting taxes etc. We will also take care of wage deductions, record keeping and verifying the reliability of pay data.</p>
+                                    <h4>የደመወዝ አስተዳደር</h4>
+                                    <p>አዲሱ ትውልድ የክፍያ ጥቅል ቀናቶችዎን መቆጣጠር ይችላል. ይህም የደመወዝ ውሂብን ሚዛናዊ በሆነ መልኩ በማስታረቅ እና በማስመዝገብ, ወዘተ ማስመዝገብ እና ሪፖርት መፃፍን ሊያካትት ይችላል. ወዘተ ተቀናሾች, የመዝገብ እና የፋይናንስ መረጃ አስተማማኝነትን እናረጋግጣለን.</p>
                                 </div>
                             </div>
                            <!-- <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
@@ -793,8 +814,8 @@ a {
 <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
                     <div class="area-title caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <h2>Logistics</h2>
-                        <p>The management of the flow of products from point of origin to point of consumption and the flow of raw materials from the point of origin to your manufacturing plant is an entirely different process from the conversion of raw materials to a finished product. New Generation can be a trusted ally in providing tailor made services so your organization can focus on maintaining product quality while we worry about everything else. </p>
+                        <h2>ሎጂስቲክስ</h2>
+                        <p>የምርት ውጤትን ከመነሻው እስከ ፍጆታ ፍጆታ ማስተዳደር እና ከንት ከዋነኛው እስከ ፍርፋሪ ፋብሪካዎ የጥሬ ዕቃዎች ፍሰት ጥሬ እቃዎች ጥሬ እቃዎች ከተለቀቁ ምርቶች መለወጥ ነው. በአዳዲስ ትውልድ ላይ በተቀላጠፈ የአገለግሎት ስራዎች ላይ የተመሰረተ የሽምግልና ባለሙያ ሊሆኑ ይችላሉ, ስለዚህ የእርስዎ ድርጅት ስለ ሌላ ነገር ስጨነቅ የጥራት ውጤትን በመጠበቅ ላይ ሊያተኩር ይችላል. </p>
                     </div>
                 </div>
 </div>
@@ -813,8 +834,8 @@ a {
                                     </div>
                                 </div>
                                 <div class="service-details">
-                                    <h4 style="color: #1e88e5;">Transport facilitation</h4>
-                                    <p style="color: black; font-weight: bold;">New generation can simplify and harmonize your transport procedures and the information flows associated with them to increase efficiency.</p> 
+                                    <h4 style="color: #1e88e5;">የመጓጓዣ አቅርቦት</h4>
+                                    <p style="color: black; font-weight: bold;">ኒው ጄኔሬሽን የመጓጓዣ አሠራሮችዎን እና ከእነሱ ጋር የተዛመዱ የመረጃ ፍሰቶችን ቅልጥፍና ለመጨመር እና ለማስማማት ቀለል ያለ እና ማፅደቅ ይችላል.</p> 
                                 </div>
                             </div>
                             <div class="single-service">
@@ -824,8 +845,8 @@ a {
                                     </div>
                                 </div>
                                 <div class="service-details">
-                                    <h4 style="color: #1e88e5;">Warehouse operation</h4>
-                                    <p style="color: black; font-weight: bold;"> As an integral part of your company's business strategy, efficient warehouse operations can ensure that your company ships and receives vital stock in time for replenishment on store shelves , your manufacturing facilities or other warehouses. We can take this burden off of your shoulders .
+                                    <h4 style="color: #1e88e5;">የመጋዘን ክዋኔ</h4>
+                                    <p style="color: black; font-weight: bold;"> የኩባንያዎ የንግድ ስራ ስትራቴጂ አካል እንደመሆኑ, አስተማማኝ የመጋዘን ክዋኔዎች ኩባንያዎ በመደብር ውስጥ መደርደሪያዎች, በማኑፋክቸሪንግ ፋብሪካዎችዎ ወይም በሌሎች መጋዘኖቻቸው ላይ ለመተካት አስፈላጊውን ጊዜ ይቀበላል. ይህንን ሸክም ከትከሻዎ ላይ ልንወጣ እንችላለን.
 </p> 
                                 </div>
                             </div>
@@ -836,8 +857,8 @@ a {
                                     </div>
                                 </div>
                                 <div class="service-details">
-                                    <h4 style="color: #1e88e5;">Product distribution</h4>
-                                    <p style="color: black; font-weight: bold;"> New generation can become the channel for making your product available for your consumer or business user while you keep on working on maintaining the quality of your product.</p> 
+                                    <h4 style="color: #1e88e5;">የምርት ስርጭት</h4>
+                                    <p style="color: black; font-weight: bold;">ኒው ጄኔሬሽን የምርትዎን ጥራት ለመጠበቅ እየሰሩ ሳሉ ምርቱ ለደንበኛዎ ወይም ለንግድ ስራዎ ተጠቃሚ እንዲሆን ለማድረግ ሰርጥ ሊሆን ይችላል.</p> 
                                 </div>
                             </div>
                             <div class="single-service">
@@ -847,7 +868,7 @@ a {
                                     </div>
                                 </div>
                                 <div class="service-details">
-                                    <h4 style="color: #1e88e5;">Open yard warehousing</h4>
+                                    <h4 style="color: #1e88e5;">ክፈት መጋዘን ቤቶች</h4>
                                     
                                 </div>
                             </div>
@@ -858,7 +879,7 @@ a {
                                     </div>
                                 </div>
                                 <div class="service-details">
-                                    <h4 style="color: #1e88e5;">Store handling and operation including Inventory function</h4> 
+                                    <h4 style="color: #1e88e5;">የእቃዎች ተግባርን ጨምሮ አያያዝን እና ክወናን</h4> 
                                 </div>
                             </div>
                         </div>
@@ -866,7 +887,7 @@ a {
                 </div>
             </div>
         </div>
-    </section>
+  <!--  </section>-->
     
 
 
@@ -877,7 +898,7 @@ a {
           <div class="col-sm-8 col-sm-offset-2">
             <div class="twitter-icon text-center">
               <i class="fa fa-certificate fa-4x" style="color: #1e88e5" ></i>
-               <h4>What client’s say about our Services</h4>
+               <h4>ደንበኛው ስለአገልግሎቶቻችንን የሚናገለው</h4>
             </div>
 
            <div id="twitter-carousel-service" class="carousel slide" data-ride="carousel">
@@ -914,8 +935,8 @@ a {
                             <div class="row">
                               <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <div class="catalouge-content" style="background-color: #1e88e5;">
-                                        <h2 style="color: white">Why Choose Us ?</h2>
-                                        <p>Simply, because WE CARE! We care about your business and about your staff. We care about your revenues, your costs and maximizing your profit. We care about the well being of your staff, their productivity and the future of both the organization and each individual staff. Our clients can attest to the fact that we put your needs ahead of our own. And this is why we can better service your needs more than anyone out there.</p>
+                                        <h2 style="color: white">ለምን እኛን መምረጥ አለቦት ?</h2>
+                                        <p>በአጭር አነጋገር, እኛ ስለምንጨነክልዎ! ስለ ንግድዎ እና ስለ ሰራተኞቻችን እንጨነቃለን. ስለሚያገኙት ገቢዎች, ወጪዎችዎ እና የእርስዎን ትርፍ ለማሳደግ እንጠነቀቃለን. ስለ ሰራተኛዎ ደህንነት, ስለ ምርታማነታቸው እና ስለ ድርጅቱ እና ለእያንዳንዱ ሰራተኛ የወደፊት ሁኔታ እንጨነቃለን. ደንበኞቻችን ከራስዎ የሚጠበቁትን ፍላጎቶች ማሟላት ለመቻላችን ማረጋገጥ ይችላሉ. በዚህ ምክንያት ነው የእርስዎን ፍላጎት ከሚያስፈልገው በላይ ለማገልገል የምንችለው.</p>
                                     </div>
                                 </div>
                             </div>
@@ -923,4 +944,8 @@ a {
                     </div>
                 </div>
             </div>
-        </section>
+      
+
+
+
+       

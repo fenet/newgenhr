@@ -85,7 +85,7 @@ function switchVisible() {
     height: 1px;
     left: 0;
     position: absolute;
-    width: 50px;
+    width: auto;
 }
 .about-history-content ul {
     margin-top: 20px;
@@ -180,6 +180,49 @@ h2 {
     position: relative;
     text-transform: uppercase;
 }
+.btn_lang {
+  background-color:#028fcc;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+   float: right;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+    border-radius: 10px;
+}
+
+.btn_lang span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn_lang span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn_lang:hover span {
+  padding-right: 25px;
+}
+
+.btn_lang:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 </style>
 
     <br>
@@ -205,7 +248,7 @@ h2 {
     <div class="container">
       <div class="row">
                    <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-                       <h2 style="font-size: 50px;" ><span style="color: #1e88e5">History Of</span> <strong> <span style="color: black;"> New Generation</strong> <br> <span style="color: #1e88e5" >የኔው ጄኔሬሽን ታሪክ <span></h2>
+                       <h2 style="font-size: 46px;" ><span style="color: #1e88e5">History Of</span> <strong> <span style="color: black;"> New Generation</strong> <br> <span style="color: #1e88e5" >የኔው ጄኔሬሽን ታሪክ <span></h2>
                    </div>
             </div>
     </div>
@@ -350,10 +393,7 @@ We have legal and valid licenses and quality assurance certificates that enable 
 
 -->
 
-
-<dir class="row">
-<input id="Button1" type="button" class="btn btn-primary" value="Translate" onclick="switchVisible();"/>
-</dir>
+<button class="btn_lang" onclick="switchVisible();" ><span>ወደ አማርኛ</span></button>
 
 <div id="Diveng">
     <section id="english">

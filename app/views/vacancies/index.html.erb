@@ -33,6 +33,7 @@
     position: relative;
     text-transform: uppercase;
 }
+
 </style>
 
 <section>
@@ -60,7 +61,7 @@
               </div>  
               
             </div><hr>
-            <div class="member-info">
+            <div class="member-info" style="text-align: center;">
                 <div class="entry-content">
             <span class="label label-info" > Vacancy Detail </span>  
             <p  style="font-size: 16px; color: black;"><%=f.vacancy_detail%> </p>
@@ -69,7 +70,8 @@
              <span class="label label-info"> Vacancy Location </span>
               <p  style="font-size: 16px; color: black;"><%=f.vacancy_location%> </p>
               <span class="label label-info"> Posted On </span>
-              <p  style="font-size: 13px; color: black;"><%=f.created_at %> </p>
+              <p  style="font-size: 13px; color: black;"><%=f.created_at %> </p><br>
+              <%= link_to("Apply Here", new_cv_path,  class: "label label-info",  style: "color: black;" )%>
             </div>
               </div><hr>
               <% if admin_signed_in? %>
