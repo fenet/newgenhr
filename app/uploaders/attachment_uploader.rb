@@ -4,12 +4,11 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  include Cloudinary::CarrierWave
+  #storage :file
   # storage :fog
-  # API KEY 496619584395961
-  # API SECRET XPkTA4Tf5UP_pUeKJql6GceGFck
-  # ENVIROMENT VARIABLE CLOUDINARY_URL=cloudinary://496619584395961:XPkTA4Tf5UP_pUeKJql6GceGFck@dmsfbk2lv
-  
+
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir

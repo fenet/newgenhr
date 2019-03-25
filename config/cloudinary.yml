@@ -1,0 +1,18 @@
+development:
+  cloud_name: "dmsfbk2lv"
+  api_key: "496619584395961"
+  api_secret: "XPkTA4Tf5UP_pUeKJql6GceGFck"
+  secure: true
+  cdn_subdomain: true
+test:
+  cloud_name: "dmsfbk2lv"
+  api_key: "496619584395961"
+  api_secret: "XPkTA4Tf5UP_pUeKJql6GceGFck"
+  secure: true
+  cdn_subdomain: true
+production:
+  cloud_name: "dmsfbk2lv"
+  api_key: "496619584395961"
+  api_secret: "XPkTA4Tf5UP_pUeKJql6GceGFck"
+  secure: true
+  cdn_subdomain: true

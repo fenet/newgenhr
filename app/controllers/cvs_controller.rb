@@ -2,7 +2,7 @@ class CvsController < ApplicationController
      #before_action :authenticate_admin!, except: [:new , :cv_complet]
   before_action :authenticate_admin!, only: [:index ]
   before_action :find_cv, only: [:edit, :update, :delete  ]
-  
+
   def index
 
      @cvs = Cv.order('created_at DESC')
@@ -15,14 +15,14 @@ class CvsController < ApplicationController
      # end
      if params[:search]
       @search_term= params[:search]
-    @cvs = @cvs.search_by(@search_term).order('created_at DESC') 
+    @cvs = @cvs.search_by(@search_term).order('created_at DESC')
     end
   #  @cvs = Cv.paginate(:page => params[:page], :per_page => 16).order('created_at DESC')
- 
+
   end
 
   def edit
-  end 
+  end
 
   def delete
   end
@@ -69,11 +69,11 @@ def destroy
    def cv_params
     params.require(:cv).permit(:cv_title,:job_category,:institution_name,:field_of_study,:admission_year,:graduation_year,:degree_level,:job_title,:company_name,:start_date,:end_date,:type_of_organization,:skills,:upload_cv, :phone_number, :email, :address)
   end
- 
+
 
 def find_cv
       @cv = Cv.find(params[:id])
   end
- 
+
 
 end

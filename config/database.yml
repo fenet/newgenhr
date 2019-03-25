@@ -35,4 +35,4 @@ production:
   encoding: utf8
   database: newgenHR
   username: newgen
-  password: lidetkid
+  password: <%= ENV['NEWGENHR_DB_PASSWORD'] %>
