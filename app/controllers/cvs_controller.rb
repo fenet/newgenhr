@@ -35,11 +35,12 @@ class CvsController < ApplicationController
   end
 
   def download_file
-      @resource = Cv.find(params[:id])
-      send_file(@resource.upload_cv.path,
-      :disposition => 'attachment',
-      :type => "application/pdf || application/docx",
-      :url_based_filename => false)
+     #Cloudinary::Utils.private_download_url self.cloudinary_id, self.format, attachment: true
+     @resource = Cv.find(params[:id])
+     send_file(@resource.upload_cv.path,
+     :disposition => 'attachment',
+     :type => "application/pdf || application/docx",
+     :url_based_filename => false)
   end
 
   def create
