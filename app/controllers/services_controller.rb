@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
-	before_action :authenticate_admin!, except: [:index, :service_amh]
-  before_action :find_service, only: [:edit, :update, :delete]
+	 before_action :authenticate_admin!, except: [:index, :service_amh]
+ 	 before_action :find_service, only: [:edit, :update, :delete]
  
  def index
     @services = Service.order('created_at DESC')
