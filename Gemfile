@@ -32,7 +32,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'execjs'
 gem 'therubyracer', platforms: :ruby
 gem 'devise', '~> 4.4', '>= 4.4.3'
-gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'carrierwave', '~> 1.3'
 gem 'cloudinary', '~> 1.11', '>= 1.11.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
