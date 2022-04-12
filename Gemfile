@@ -46,7 +46,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'activeadmin', '~> 1.3'
-gem 'nokogiri', '~> 1.8', '>= 1.8.5'
+gem 'nokogiri', '~> 1.13'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development do
